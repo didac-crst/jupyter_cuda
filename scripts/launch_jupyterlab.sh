@@ -1,4 +1,5 @@
 #!/bin/bash
+# Launch JupyterLab
 
 # Check if the correct number of arguments are provided
 if [ "$#" -ne 1 ]; then
@@ -14,10 +15,10 @@ source $HOME/miniconda3/etc/profile.d/conda.sh
 conda init
 
 # Check if the environment is active, if no activate it
-if [ "$CONDA_DEFAULT_ENV" != "$env_name" ]; then
-    conda deactivate
-    conda activate $env_name
-fi
+# if [ "$CONDA_DEFAULT_ENV" != "$env_name" ]; then
+#     conda deactivate
+#     conda activate $env_name
+# fi
 
 # Launch JupyterLab in a conda environment
 jupyter lab  --notebook-dir='~/Repositories/' --ip='*' --port=8888 --no-browser --allow-root --NotebookApp.token='mytoken'

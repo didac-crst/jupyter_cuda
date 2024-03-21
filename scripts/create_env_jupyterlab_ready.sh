@@ -1,5 +1,5 @@
 #!/bin/bash
-# Create a new conda environment with Jupyter and CUDA support
+# Create a new conda environment installed in Jupyter
 
 # Check if the correct number of arguments are provided
 if [ "$#" -ne 2 ]; then
@@ -19,7 +19,7 @@ source $HOME/miniconda3/etc/profile.d/conda.sh
 conda init
 
 # Activate the new environment
-conda activate $python_version
+conda activate $env_name
 
 # Update pip
 pip install --upgrade pip

@@ -19,7 +19,7 @@ source $HOME/miniconda3/etc/profile.d/conda.sh
 conda init
 
 # Activate the new environment
-conda activate $python_version
+conda activate $env_name
 
 # Install CUDA Toolkit and cuDNN
 conda install -c conda-forge cudatoolkit=11.2.2 cudnn=8.1.0
@@ -35,8 +35,8 @@ printf 'export LD_LIBRARY_PATH=${OLD_LD_LIBRARY_PATH}\nunset OLD_LD_LIBRARY_PATH
 # Run the script once:
 source $CONDA_PREFIX/etc/conda/activate.d/env_vars.sh
 
-# Install Jupyter
-conda install jupyter
-
 # Update pip
 pip install --upgrade pip
+
+# Install Jupyter
+pip install jupyter
