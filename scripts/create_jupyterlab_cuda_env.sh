@@ -14,9 +14,11 @@ python_version=$2
 # Create a new conda environment
 conda create -n $env_name python=$python_version
 
-# Activate the new environment
+# Activate conda
 source $HOME/miniconda3/etc/profile.d/conda.sh
 conda init
+
+# Activate the new environment
 conda activate $python_version
 
 # Install CUDA Toolkit and cuDNN
